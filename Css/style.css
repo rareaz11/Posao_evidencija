@@ -1,0 +1,691 @@
+*{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0px;
+   
+}
+.grid
+{
+   
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas:
+    'hed'
+    'main'
+    'footer';
+    
+    
+}
+.header
+{
+    position: relative;
+   
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    'll rr' ;
+    background-color:rgba(15, 4, 26, 0.178);
+    grid-area:hed;
+    
+
+
+}
+
+.headerr form button
+{
+    border: none;
+    background-color:none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.skriveni
+{
+    position: fixed;
+    background-color: orange;
+    width:200px;
+    height: 650px;
+   top:1px;
+   left: -200px;
+   transition: transform 1.3s ease-in;
+}
+.btnOpen
+{
+   
+    position: absolute;
+    left: -160px;
+     font-size: 20px;
+    top: 37px;
+    border: none;
+    cursor: pointer;
+
+}
+.btnOpen:hover
+{
+    background-color: gray;
+}
+.skriveni .btnClose
+{
+    position: absolute;
+    right: 0px;
+     font-size: 20px;
+    top: 0px;
+    border: none;
+    cursor: pointer;
+
+}
+.btnClose:hover
+{
+    background-color: gray;
+}
+.pokazi
+{
+  transform: translateX(200px);
+}
+.main
+{
+   
+  
+   /* background-image: linear-gradient( 90deg,blue,rgb(26, 22, 82));*/
+   /*background-image: linear-gradient(45deg,rgb(48, 38, 6),blue);*/
+   background-color: gray;
+    background-position: center;
+    background-size: cover;
+    padding:0 80px 0 120px;
+    grid-area: main;
+    color: white;
+    
+}
+
+.mainheader
+{
+   display: flex;
+   justify-content: center;
+}
+.mainheader .trazilica .ajax form
+{
+    display: flex;
+   
+ 
+}
+.mainheader 
+{
+    display: flex;
+}
+
+/*skrivena forma*/
+.skriveno
+{
+    position: absolute;
+    border: 5px solid black;
+    top: 200px;
+    z-index: -1;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+}
+.act
+{
+    z-index: 1;
+}
+.skriveno h4
+{
+    text-align: center;
+}
+
+.skriveno form
+{
+    display: flex;
+    flex-direction: column;
+}
+.skriveno form button
+{
+    margin: 10px;
+}
+.mainheader .trazilica div
+{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: 20px;
+  
+    
+}
+.mainheader .err1
+{
+    margin: 10px;
+    font-size: 25px;
+    color: darkred;
+}
+.mainBody
+{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer
+{
+    border: 1px solid black;
+    text-align: center;
+    background-color: black;
+    font-size: 30px;
+    color: wheat;
+    grid-area: footer;
+}
+.headerl
+{
+ 
+    grid-area: ll;
+    display: flex;
+    justify-content: space-evenly;
+    
+    align-items: center;
+    font-size: 30px;
+    margin-right: 100px;
+}
+.headerr
+{
+
+    grid-area: rr;
+    display: flex;
+    justify-content:space-evenly;
+   align-items: center;
+    font-size: 30px;
+  
+}
+.headerr a
+{
+   
+   
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    height: 100%;
+    color: black;
+    padding: 20px;
+ 
+   
+ 
+}
+.headerl a
+{
+    text-decoration: none;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 100%;
+   color: black;
+   padding: 20px;
+   
+   
+    
+}
+
+.headerl a:hover
+{
+    background-color:rgba(84, 63, 104, 0.178);
+}
+.headerr a:hover
+{
+    background-color:rgba(84, 63, 104, 0.178);
+}
+/* registrirani korisnik buttons*/
+.mainBody .regKor
+{
+ display: flex;
+}
+.mainBody .regKor form button
+{
+    margin: 10px;
+    padding: 10px;
+}
+/*admin-podesavanje*/
+.mainBody .postavke
+{
+    display: flex;
+}
+.mainBody .postavke .one h3
+{
+    text-align: center;
+}
+.mainBody .postavke .one
+{
+    margin: 20px;
+}
+.mainBody .postavke .two
+{
+    margin: 20px;
+}
+
+.mainBody form
+{ display:  flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+.mainBody form button
+{
+    font-size: 20px;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+/* za buttons koji su dobili svaki svoj form*/
+.mainBody .forms
+{
+    display:  flex;
+}
+/*graf*/
+.mainBody .graf
+{
+    background-color: white;
+    margin: 40px;
+    width: 100vh;
+}
+/*form i buttons kod dnevnika izmjena*/
+
+.mainBody .buttons .form22
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+   flex-wrap: wrap;
+}
+.mainBody .buttons .form22 button
+{
+    padding: 5px;
+    margin: 5px;
+
+}
+/*forma kod admina--pregeld korisnickih racuna*/
+.mainBody .form4
+{
+    display: flex;
+    flex-direction: row;
+}
+.mainBody .form4 button
+{
+    margin: 10px;
+
+}
+.mainBody .form4 button:hover
+{
+    background-color: black;
+    color: white;
+}
+.mainBody table tr td
+{
+    
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+}
+.mainBody table tr td form button
+{
+    padding: 5px;
+   
+}
+
+/* naslovnica forma*/
+.mainBody .form1
+{ display:  flex;
+    flex-direction: row;
+    font-size: 25px;
+}
+.mainBody .form1 button
+{
+    
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+.mainBody form label
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mainBody form input
+{
+    font-size: 20px;
+}
+.mainBody form select
+{
+    font-size: 20px;
+}
+.mainBody form button:hover
+{
+    background-color:rgb(0, 0, 0);
+    color: white;
+}
+.mainBody h3
+{
+    font-size: 23px;
+    color: yellow;
+}
+.mainBody span
+{
+  
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(209, 228, 42);
+}
+/* za ispis pogresaka span element unutar form*/
+ .mainBody form span
+{
+  
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: red;
+}
+/*ovdje stavalja sve za responzivnosti*/
+
+/* ovo min-height koristeno radi ipad min (nisam jos sa jos jedan ipad(nezz koji) svakako pitam profesora to)*/
+@media (max-width: 820px)
+{
+    .mainBody .ajaxP tr td
+    {
+            font-size: 15px;
+    }
+  
+    .headerl
+    {
+        margin-right: 10px;
+
+
+    }
+   
+    
+}
+@media(max-width:735px)
+{
+    .mainBody table tr td
+    {
+        font-size: 15px;
+    }
+    .mainBody .ajaxP tr td
+    {
+            font-size: 11px;
+    }
+    .btnOpen
+    {
+        left: 1px;
+    }
+
+    .header
+    {
+        display: flex;
+            position: relative;  
+       
+    }
+  
+    .headerl
+    {
+        position: absolute;
+        top:65px;
+        left: -100px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        transition: transform 1.3s linear ;
+     
+    }
+    .activel
+    {
+        transform: translateX(120px);
+    }
+  
+    .headerr
+    {
+        position: absolute;
+        top:300px;
+        left: -100px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        transition: transform 1.3s linear;
+     
+
+  
+    }
+    .footer
+    {
+        font-size: 20px;
+    }
+    .mainBody h3
+    {
+        font-size: 19px;
+    }
+    .mainBody h1
+    {
+        font-size: 25px;
+    }
+    .mainBody form
+    {
+        font-size: 18px;
+    }
+    
+    .mainBody form button
+{
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.mainBody form input
+{
+    font-size: 18px;
+}
+.mainBody form select
+{
+    font-size: 18px;
+}
+
+
+
+
+}
+@media(max-width:600px)
+{
+
+    
+.header button
+{
+    font-size: 16px;
+    top:36px;
+}
+.footer
+{
+    font-size: 18px;
+}
+.mainBody h3
+{
+    font-size: 16px;
+}
+.mainBody h1
+{
+    font-size: 22px;
+}
+.mainBody form
+{
+    font-size: 16px;
+}
+
+.mainBody form button
+{
+font-size: 16px;
+border: none;
+padding: 10px;
+border-radius: 10px;
+}
+
+.mainBody form input
+{
+font-size: 16px;
+}
+.mainBody form select
+{
+font-size: 16px;
+}
+.mainBody .ajaxP tr td
+    {
+            font-size: 13px;
+    }
+    
+.mainBody table
+{
+    width: 340px;
+}
+.mainBody table tr td
+{
+    font-size: 13px;
+}
+    .mainBody .form1  button
+    {
+      padding: 7px;
+      font-size: 15px;
+    }
+
+}
+@media(max-width:560px)
+{
+
+    .mainheader .trazilica div label
+    {
+        font-size: 15px;
+    }
+    
+    .mainheader .trazilica div 
+    {
+        width: 200px;
+    }
+    .mainheader .trazilica .ajax form
+    {
+        justify-content: center;
+    }
+    .mainheader .trazilica .ajax form button
+    {
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .mainBody h1
+{
+    font-size: 18px;
+}
+
+    .mainBody .ajaxP tr td
+    {
+            font-size: 12px;
+    }
+}
+@media(max-width:430px)
+{
+    .mainBody .ajaxP tr td
+    {
+    font-size: 12px;
+    }
+
+    .skriveni
+    {
+        left: -250px;
+    }
+    .headerl
+    {
+        font-size: 18px;
+    
+        left:-130px;
+    }
+    .headerr
+    {
+        font-size: 18px;
+        left:-130px;
+    }
+.btnClose
+{
+    font-size: 10px;
+}
+.header button
+{
+    font-size: 14px;
+    top:30px;
+}
+.footer
+{
+    font-size: 14px;
+}
+.mainBody h3
+{
+    font-size: 14px;
+}
+.mainBody h1
+{
+    font-size: 18px;
+}
+.mainBody form
+{
+    font-size: 14px;
+}
+
+.mainBody form button
+{
+font-size: 14px;
+border: none;
+padding: 5px;
+margin-bottom: 5px;
+border-radius: 10px;
+
+}
+
+.mainBody form input
+{
+font-size: 14px;
+}
+.mainBody form select
+{
+font-size: 14px;
+}
+.header
+{
+    padding:0 20px 0 20px;
+}
+.main
+{
+    padding: 0 20px 0 20px;
+}
+
+}
+@media(min-height:960px)
+{
+    .grid
+    {
+        grid-template-rows: 100px 900px  100px;
+    }
+
+    
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentacija</title>
+    <style>
+        body
+        {
+        padding: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div>
+        <h1>DOKUMENTACIJA</h1>
+
+    </div>
+    <div>
+        <h2>OPIS PROJEKTNOG ZADATKA</h2>
+        <p>Zadatak je trazio slijedeće: 
+            Bilo je potrebno kreirati program u web razvojnom okruženju koji služi 
+            za evidenciju i pretragu
+             ponuda poslodavaca i da korisnici mogu vidjeti svoje prijave. 
+             Koristeći  zadani izvor podataka potrebno je
+              dodavati, prikazati, izmjenjivati i brisati podatke. 
+              Program treba imati slijedeće funkcionalnosti: CRUD operacije nad određenim tablicama. Učitavanje
+              podataka bez osvježavanja stranice prema zadanim kolonama kako je u projektu defnirano: Naziv Tvrtke,
+              Kratak opis, Stručna sprema, Tip Ugovora, Kategorija posla.
+            </p>
+    </div>
+
+<div>
+   <h2>OPIS PROJEKTNOG RJEŠENJA</h2>
+   <p>
+    Program je kreiran u alatu: Visual Studio Code. Ovaj program za izvor podataka
+    koristi bazu podatka(PhpMyAdmin). Kreirana je baza podatka imena:"EVIDENCIJA_POSLOVA", 
+     koja ima slijdeće tablice:blokiraj,dogadaj,jobs,korisnici,prijavaposao,stranice.
+     Za provođenje CRUD oprecija koristen je PHP kod, koji  je provodio izmjene, dodavanja ,brisanje.
+     Program ima tri vrste korisnika: Gost,Regirstriarni korisnik i Administrator.
+     za učitvanje podataka bez osvježavanja stranice korišten je AJAX.
+     
+   </p>
+</div>
+<div>
+<h2>KORISTENE TEHNOLOGIJE I ALATI</h2>
+<ul>
+    <li>PHP</li>
+    <li>PhpMyAdmin(Baza podataka)</li>
+    <li>Visual Studio</li>
+    <li>AJAX</li>
+    <li>JavaScript</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>XML</li>
+    
+    <li>Chart.js(JavaScript library)</li>
+    <li>Apache(Server)</li>
+    
+
+</ul>
+</div>
+<div>
+    <h2>USE CASE DIJAGRAM SLUČAJEVA</h2>
+    <h3>U dijagramu slucajeva prikazano su 3 vrste korisnika</h3>
+    <h4>Za izradu dijagrama koristen je alat Modelio Open Source 4.1</h4>
+    <img src="evidencija poslova uml dijagram Use Case diagram.jpg" alt="">
+</div>
+
+<div>
+    <h2>ER BAZE PODATAKA</h2>
+    <img src="ER DIJAGRAM.png" alt="">
+</div>
+
+<div><h2>POPIS MAPA I DATOTEKA</h2>
+<ul>
+    <li>Evidencija</li>
+    <ul>
+        <li>Admin</li>
+        <ul>
+            <li>JS</li>
+            <ul><li>datum</li></ul>
+            <li>templates</li>
+            <ul><li>header.php</li></ul>
+            <li>AdminNas.php</li>
+            <li>allJobs.php</li>
+            <li>backup.php</li>
+            <li>dodajPosao.php</li>
+            <li>Podesavanje.php</li>
+            <li>pregledRacuna.php</li>
+            <li>restore.php</li>
+            <li>statistike.php</li>
+        </ul>
+        <li>Css</li>
+        <ul><li>style.css</li></ul>
+        <li>DB</li>
+        <ul><li>veza.php</li></ul>
+        <li>JScript</li>
+        <ul><li>ajax.js</li>
+        <li>jsdodaj.js</li>
+    <li>regJavaScript</li>
+    <li>scripta.js</li>
+    </ul>
+    <li>PHP</li>
+    <ul>
+        <li>data.php</li>
+        <li>dataPosao.php</li>
+    </ul>
+    <li>
+        RegKorisnik
+    </li>
+    <ul>
+        <li>templates</li>
+            <ul>
+                <li>header</li>
+            </ul>
+
+        <li>naslovnica.php</li>
+        <li>pretrazivanje.php</li>
+    </ul>
+    <li>
+       SYSTEM 
+       <ul><li>AdminPrijava.php</li>
+    <li>AktivnostSession.php</li>
+<li>metode.php</li>
+<li>prov_prijava.php</li>
+<li>recap.php</li>
+<li>stranicenje.php</li></ul>
+    </li>
+
+    <li>templates</li>
+    <ul>
+        <li>header.php</li>
+        <li>footer.php</li>
+    </ul>
+    <li>antonio.png</li>
+    <li>autor.html</li>
+    <li>infoapp.php</li>
+    <li>IspisPoslova.php</li>
+    <li>log.php</li>
+    <li>naslovnica.php</li>
+    <li>Registracija.php</li>
+    <li>rss.php</li>
+    <li>rss.xml</li>
+    <li>dokumentacija.html</li>
+    <li>uml dijagram.JPG</li>
+    <li>ER DIJAGRAM.png</li>
+    </ul>
+</ul>
+</div>
+<div><h2>UOČENI PROBLEMI U RADU</h2>
+    <ul>
+        <li>POGRESKA U RADU:ako se korisnik prijavio na posao. Greška ForeignKey</li>
+        <li>POGRESKA U RADU: lozinka treba biti hash</li>
+        <li>Možda pogreška-admin je jedan: nema načina za dodavanje novog admina</li>
+        <li>Kad se pošalje email da se dobije odgovor nazad</li>
+        <li>čemu točno služi generirani cookie ID: sakrivanje identiteta? </li>
+        <li>Ne baš najbolje razumijevanje cookia (zadatak 7)</li>
+        <li>Na svim mjestima nije implementirano straničenje: problem kompleksnosti koda(AJAX učitavanje i php i sql iz baze podataka). Za uspješnost 
+            kod se rastavilo na 2 php stranice </li>
+            <li>
+                Za poboljšanje funkcionalnosti dodati da stranicu za korisnika da može mijenjati svoje podatke
+            </li>
+        <li>
+            <li>dodati real_escape_string(gdje je izostavljeno)</li>
+            Nije pronađen način za vraćanje podataka iz sigurnosne kopije
+        </li>
+        <li>
+            Na nekim stranicama gdje nije korišteno straničenje dolazi od širenja header i 
+            footer. Korišten je grid. Nakon povećavanja sadržaj uočen je problem.
+            Možda da se ne korste 1fr(frakcije);  
+        </li>
+        <li>Problem uočen kod izrade grafa(korišten Chart.js library). Vrijednosti nakon što su prebačene sa json_encode($lista);
+            nije se našao način da se podatci učitaju u graf
+        </li>
+    </ul>
+</div>
+</body>
+</html>
